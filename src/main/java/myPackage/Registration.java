@@ -31,7 +31,7 @@ public class Registration extends HttpServlet {
 			// Updated driver for MySQL 8+
 			Class.forName("com.mysql.cj.jdbc.Driver");
 
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/signup", "root", "Vansh@sql16");
+			conn = DriverManager.getConnection("jdbc:mysql://mysql:3306/signup", "root", "Vansh@sql16");
 
 			String query = "insert into users(uname, password, email, mobileno) values(?, ?, ?, ?)";
 			PreparedStatement ps = conn.prepareStatement(query);
