@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Vansh@sql16
+      MYSQL_DATABASE: signup
+    ports:
+      - "3306:3306"
+
+  web:
+    build: .
+    container_name: tomcat-app
+    depends_on:
+      - mysql
+    ports:
+      - "8080:8080"
