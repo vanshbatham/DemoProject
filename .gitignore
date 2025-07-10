@@ -1,0 +1,17 @@
+# Build files
+/target/
+/build/
+
+# IDE files
+/.idea/
+/*.iml
+*.log
+*.class
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Node/SASS cache if used
+node_modules/
+.sass-cache/
